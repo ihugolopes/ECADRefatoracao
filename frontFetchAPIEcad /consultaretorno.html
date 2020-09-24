@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+   
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="retorno.css" />
+    <title>Teste ECAD</title>
+  </head>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      ECAD
+    </a>
+  </nav>
+  <br>
+  <div class="col-md-12">
+   <form data-form>
+     <h3>CADASTRAR</h3>
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="data-nossonumero">Nosso Numero</label>
+        <input type="text" class="form-control" data-nossonumero id="data-nossonumero">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputAddress">Data Inicio</label>
+        <input type="text" placeholder= "dd/mm/aaaa" data-date-format="DD MM YYYY" class="form-control" id="data-datainicio" data-datainicio>
+      </div>
+      
+      <div class="form-group col-md-6">
+        <label for="inputAddress">Data Fim</label>
+        <input type="text" placeholder= "dd/mm/aaaa" data-date-format="DD MM YYYY" class="form-control" id="data-datafim" data-datafim >
+      </div>
+      
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="data-ocorrencia">Ocorrência</label>
+        <select id="data-ocorrencia" data-ocorrencia class="form-control">
+          <option selected>Selecionar...</option>
+          <option>...</option>
+        </select>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="idunidade">Unidade</label>
+        <select id="idunidade" data-unidade class="form-control">
+          <option selected>Selecionar...</option>
+          <option>...</option>
+        </select data-conteudo-option>
+      </div>
+      
+    </div>
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+  </form>
+  </div>
+
+  <br><br>
+  <div class="col-md-12">
+    <form data-formpesquisa>
+      <h3>PESQUISAR</h3>
+     <div class="form-row">
+       <div class="form-group col-md-12">
+         <label for="inputEmail4">Nosso Numero</label>
+         <input type="text" class="form-control" data-nossonumero-pesquisa id="inputEmail4">
+       </div>
+       <div class="form-group col-md-6">
+         <label for="inputAddress">Data Inicio</label>
+         <input type="text" class="form-control" id="inputAddress" data-datainicio-pesquisa placeholder="Digite uma data de inicio">
+       </div>
+       
+       <div class="form-group col-md-6">
+         <label for="inputAddress">Data Fim</label>
+         <input type="text" class="form-control" id="inputAddress" data-datafim-pesquisa placeholder="Digite uma data de fim">
+       </div>
+       
+     </div>
+     <div class="form-row">
+       <div class="form-group col-md-6">
+         <label for="inputState">Ocorrência</label>
+         <select id="inputState" data-ocorencia-pesquisa class="form-control">
+           <option selected>Selecionar...</option>
+           <option>...</option>
+         </select>
+       </div>
+ 
+       <div class="form-group col-md-6">
+         <label for="inputState">Unidade</label>
+         <select id="inputState" data-unidade-pesquisa class="form-control">
+           <option selected>Selecionar...</option>
+           <option>...</option>
+         </select>
+       </div>
+       
+     </div>
+     <button type="submit" class="btn btn-primary">Pesquisar</button>
+   </form>
+   </div>
+
+
+  <br><br>
+    <div class="col-md-12">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Nosso Numero</th>
+            <th scope="col">Data Início</th>
+            <th scope="col">Data Fim</th>
+            <th scope="col">Ocorrência</th>
+            <th scope="col">Unidade</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+
+          </tr>
+        </thead>
+        <tbody data-conteudo-tabela>
+      
+        </tbody>
+      </table>
+    </div>
+
+
+<body>
+  
+
+
+    <script src="./api/restapi.js"></script>
+    <script src="./cadastro.js"></script>
+    <script src="listagem-retornos.js"></script>
+    <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
